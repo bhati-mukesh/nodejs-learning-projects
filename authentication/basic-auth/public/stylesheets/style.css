@@ -1,0 +1,37 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.form-div, .login-form{
+  border: 2px solid purple; 
+  padding:15px;
+  border-radius: 8px;
+  box-shadow: 7px 7px rgb(204, 200, 200);
+}
+
+.custom-table{
+  box-shadow: 7px 7px rgb(204, 200, 200);
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.btn-custom {
+  background-color: #b67cd1;
+  width: 100%;
+}
+
+.btn-custom:hover {
+  background-color: #a64dcf;
+  width: 100%;
+  cursor: pointer;
+}

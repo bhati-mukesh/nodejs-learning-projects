@@ -1,0 +1,61 @@
+<%- include('header') -%>
+<!-- ******************** navbar start ******************** -->
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">ISAM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="/logout" method="POST">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+    </form>
+  </div>
+</nav>
+</div>
+<!-- ******************** navbar end ******************** -->
+<!-- ******************** flash message start ******************** -->
+<div class="container col-xl-4 mt-3">
+  <% if (typeof message != "undefined"){ %>
+    <% if (message.length > 0){ %>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong><%= message %></strong>
+        </div>
+    <% } %>
+  <% } %>
+</div>
+<!-- ******************** flash message end ******************** -->
+
+<div class="container-fluid">
+
+  <!-- ******************** Header table start ******************** -->
+  <h3>Request Headers</h3>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Attribute</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(key in data) { %>
+              <tr>
+                  <td><%= key %></td>
+                  <td> <%= data[key] %></td>
+              </tr>
+          <% } %>
+      </tbody>
+  </table>
+  <!-- ******************** Header table end ******************** -->
+</div>
+
+
+<%- include('footer') -%>
+

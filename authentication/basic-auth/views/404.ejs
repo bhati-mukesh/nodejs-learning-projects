@@ -1,0 +1,51 @@
+
+<%- include('header') -%>
+<style>
+    body{
+        background-color: #fff;
+    }
+    h1{
+        margin-top: 50px;
+        font-size: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    h3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .custom-div{
+        margin-top: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+
+    }
+    .err-btn{
+        border: 1px solid #91171b;
+        width: 150px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .err-btn:hover{
+        background-color:#91171b;
+        color: #fff;
+    }
+</style>
+
+<h1>404</h1>
+<h3>Oh noes, there's nothing in here</h3>
+<div class="custom-div">
+<a href="/" class="btn err-btn " style="margin-right: 20px;">Home</a>
+</div>
+<%- include('footer') -%>
